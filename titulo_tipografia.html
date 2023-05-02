@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tipografías para nombres de marca</title>
+    <style>
+      #text-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .text {
+        margin: 10px;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text-container"></div>
+    
+    <script>
+      const textList = [
+        'endless summer',
+        'orient to adventure',
+        'endless summers lifestyle',
+        'endless life adventures',
+        'endless horizons experience',
+        'eternal adventure',
+        'towards an endless summer',
+        'endless summer style',
+        'eternal summer compass',
+        'endless adventure brand',
+        'adventure lifestyle brand',
+        'eternal summer',
+        'endless adventure brand'
+      ];
+      
+      const fonts = [
+        'Arial', 
+        'Verdana', 
+        'Helvetica', 
+        'Times New Roman', 
+        'Georgia', 
+        'Courier New',
+        'Brush Script MT',
+        'Lucida Calligraphy',
+        'Impact',
+        'Comic Sans MS'
+      ];
+      
+      const container = document.getElementById('text-container');
+      
+      for (let i = 0; i < textList.length; i++) {
+        const text = textList[i];
+        
+        for (let j = 0; j < fonts.length; j++) {
+          const font = fonts[j];
+          
+          const div = document.createElement('div');
+          div.className = 'text';
+          div.style.fontFamily = font;
+          div.innerHTML = text;
+          
+          container.appendChild(div);
+        }
+      }
+    </script>
+  </body>
+</html>
